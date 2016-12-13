@@ -3,6 +3,7 @@
  */
 public class Pez_2_0 {
     final private String characterName ;
+    // "final" keyword to use to ensure that variables once assigned cannot be re-assigned
     // uncomment final to use  the swapHead example
     // Constructors do not have return statement , they are also named same as class
 
