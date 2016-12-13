@@ -7,17 +7,26 @@ public class Program {
         }
     }
 
-    public static void main(String[] args) {
-        Pez_2_0 donatello = new Pez_2_0("Donatello");
-        Pez_1_0 yoda = new Pez_1_0();
-        System.out.println("yoda = " + yoda.characterName);
-        System.out.println("donatello = " + donatello.getCharacterName());
+    public static void main(String[] args) throws InterruptedException {
+
         GoKart modelA = new GoKart("blue");
         System.out.println("modelA.getColor() = " + modelA.getColor());
-        //System.out.printf("Previous head was %s and new head is %s",donatello.swapHead("Mimi"),donatello.getCharacterName());
+        Pez_3_0 pd = new Pez_3_0("Yoda");
+        System.out.println("pd.MAX_PEZ = " + pd.MAX_PEZ);
+        // this gets a warning due to being class scope static variable
+        System.out.println("Pez_3_0.MAX_PEZ = " + Pez_3_0.MAX_PEZ);
+        // The line above due to final and static is equivalent to line below 
+        // in terms of definition 
+        System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
+        // Praise my lecturer !for this amazing example !
+        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        pd.fill(); // added Thread.sleep and InterruptedException
+        System.out.println("pd.getPez_count() = " + pd.getPez_count());
 
 
-//        Rectangle ob = new Rectangle(3, 4); // instantiation occurs only when I use *new* keyword!
+
+//System.out.printf("Previous head was %s and new head is %s",donatello.swapHead("Mimi"),donatello.getCharacterName());
+        //        Rectangle ob = new Rectangle(3, 4); // instantiation occurs only when I use *new* keyword!
 //        Pez_1_0 yoda = new Pez_1_0();
 //        Pez_1_0 veider = new Pez_1_0();
         //        System.out.println(ob.area());
@@ -39,6 +48,11 @@ public class Program {
         //boolean coolExample = false || false || true;
         //System.out.println("coolExample is always  " + coolExample);
         //
+//        Pez_2_0 donatello = new Pez_2_0("Donatello");
+//        Pez_1_0 yoda = new Pez_1_0();
+//
+//        System.out.println("yoda = " + yoda.characterName);
+//        System.out.println("donatello = " + donatello.getCharacterName());
     }
 }
 
