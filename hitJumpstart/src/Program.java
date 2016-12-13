@@ -1,6 +1,8 @@
+import com.sun.xml.internal.bind.v2.TODO;
+
 // this is my main program class name is not relevant as long as it includes main class
 public class Program {
-
+    //  TODO re-write alchemy as tomorrow morning!
     public static void printTextMoreTimes(String s, int count) {
         for (int i = 0; i < count; i++) {
             System.out.println(s);
@@ -20,9 +22,19 @@ public class Program {
         System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
         // Praise my lecturer !for this amazing example !
         System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        System.out.println("pd.isEmpty() = " + pd.isEmpty());
         pd.fill(); // added Thread.sleep and InterruptedException
         System.out.println("pd.getPez_count() = " + pd.getPez_count());
-
+        System.out.println("pd.isEmpty() = " + pd.isEmpty());
+        if (pd.isEmpty()) {
+            System.out.println("PezDispenser is FULL!");
+        }
+        while (pd.dispense()) {
+            System.out.println("Аммм....");
+        }
+        if (pd.isEmpty()) {
+            System.out.println("Ate everything ! ");
+        }
 
 
 //System.out.printf("Previous head was %s and new head is %s",donatello.swapHead("Mimi"),donatello.getCharacterName());

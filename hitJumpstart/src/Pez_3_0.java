@@ -12,8 +12,9 @@ public class Pez_3_0 {
 
     public Pez_3_0(String characterName) {
         this.characterName = characterName;
-        pez_count  = 0;
+        pez_count = 0;
     }
+
     public void fill() throws InterruptedException {
         System.out.printf("Filling.");
         pez_count = MAX_PEZ;
@@ -31,4 +32,20 @@ public class Pez_3_0 {
     public String getCharacterName() {
         return characterName;
     }
+
+    public boolean isEmpty() {
+        return pez_count == 0;
+    }
+
+    public boolean dispense() {
+        boolean wasDispensed = false;
+        if (!isEmpty()) {
+            pez_count--;
+            wasDispensed = true;
+        }
+        return wasDispensed;
+    }
+
+
+
 }
