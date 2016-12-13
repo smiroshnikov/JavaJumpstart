@@ -1,3 +1,4 @@
+// this is my main program class name is not relevant as long as it includes main class
 public class Program {
 
     public static void printTextMoreTimes(String s, int count) {
@@ -7,21 +8,25 @@ public class Program {
     }
 
     public static void main(String[] args) {
-        Rectangle ob = new Rectangle(3, 4);
-        System.out.println(ob.area());
+        Pez_2_0 donatello = new Pez_2_0("Donatello");
         Pez_1_0 yoda = new Pez_1_0();
-        Pez_1_0 veider = new Pez_1_0();
+        System.out.println("yoda = " + yoda.characterName);
+        System.out.println("donatello = " + donatello.getCharacterName());
+        GoKart modelA = new GoKart("blue");
+        System.out.println("modelA.getColor() = " + modelA.getColor());
+        //System.out.printf("Previous head was %s and new head is %s",donatello.swapHead("Mimi"),donatello.getCharacterName());
 
 
-        veider.characterName = "This is Darth Veider";
-        System.out.println("Yoda characterName is " + yoda.characterName);
-        yoda.characterName = "Can be changed to anything ??!?!?";
-        System.out.println("Yoda public character name parameter has changed to -->  = " + yoda.characterName);
-        System.out.println("Yoda secret name is  = " + yoda.getPrivateCharacterName());
-        System.out.println("I used getter to get a publicCharacterName");
-
-//
-        //
+//        Rectangle ob = new Rectangle(3, 4); // instantiation occurs only when I use *new* keyword!
+//        Pez_1_0 yoda = new Pez_1_0();
+//        Pez_1_0 veider = new Pez_1_0();
+        //        System.out.println(ob.area());
+//        veider.characterName = "This is Darth Veider";
+//        System.out.println("Yoda characterName is " + yoda.characterName);
+//        yoda.characterName = "Can be changed to anything ??!?!?";
+//        System.out.println("Yoda public character name parameter has changed to -->  = " + yoda.characterName);
+//        System.out.println("Yoda secret name is  = " + yoda.getPrivateCharacterName());
+//        System.out.println("I used getter to get a publicCharacterName");
 
         //printTextMoreTimes("Java is very nice!", 2);
         //String fistName = "Sergei";
