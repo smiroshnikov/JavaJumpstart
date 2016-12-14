@@ -1,8 +1,12 @@
-import com.sun.xml.internal.bind.v2.TODO;
-
 // this is my main program class name is not relevant as long as it includes main class
 public class Program {
     //  TODO re-write alchemy as tomorrow morning!
+
+    public static void eat(Pez_3_0 pd) {
+        while (pd.dispense()) {
+            System.out.println("Аммм....");
+        }
+    }
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -13,9 +17,10 @@ public class Program {
         if (pd.isEmpty()) {
             System.out.println("PezDispenser is FULL!");
         }
-        while (pd.dispense()) {
-            System.out.println("Аммм....");
-        }
+        eat(pd); // why method in my main needs to be declared as static in order to be used from main
+        // stackoverflow
+        //You can call non-static methods, but you can only do so through an object.
+        // That is, you need to call the method on a given object.
         if (pd.isEmpty()) {
             System.out.println("Ate everything ! ");
         }
