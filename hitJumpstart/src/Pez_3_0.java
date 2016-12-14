@@ -8,11 +8,11 @@ public class Pez_3_0 {
     final private String characterName;
     final static public int MAX_PEZ = 12; // this is a CONSTANT declaration !
     // go private if no explicit reason to expose variable
-    private int pez_count;
+    private int pezCount;
 
     public Pez_3_0(String characterName) {
         this.characterName = characterName;
-        pez_count = 0;
+        pezCount = 0;
     }
 
     // this method is overloaded below , can be useful for monkey patching
@@ -27,12 +27,18 @@ public class Pez_3_0 {
     }
 
     // this method is called from within overloaded method in order not to repeat myself
+    // TODO I need to create an exception if user uses fill method that will prevent user from overfilling pez dispenser
+    // TODO with values greater than allowed MAX_PEZ
     public void fill(int pezAmount) {
-        pez_count += pezAmount;
+        int newAmount = pezCount + pezAmount;
+        if (newAmount > MAX_PEZ) {
+            throw new IllegalArgumentException("Too many Pez !!!");
+        }
+        pezCount = newAmount;
     }
 
-    public int getPez_count() {
-        return pez_count;
+    public int getPezCount() {
+        return pezCount;
     }
 
     public String getCharacterName() {
@@ -40,13 +46,13 @@ public class Pez_3_0 {
     }
 
     public boolean isEmpty() {
-        return pez_count == 0;
+        return pezCount == 0;
     }
 
     public boolean dispense() {
         boolean wasDispensed = false;
         if (!isEmpty()) {
-            pez_count--;
+            pezCount--;
             wasDispensed = true;
         }
         return wasDispensed;

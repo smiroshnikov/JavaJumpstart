@@ -8,10 +8,9 @@ public class Program {
         }
     }
 
-
     public static void main(String[] args) throws InterruptedException {
         Pez_3_0 pd = new Pez_3_0("Yoda");
-        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        System.out.println("pd.getPezCount() = " + pd.getPezCount());
         pd.fill();
         System.out.println("pd.isEmpty() = " + pd.isEmpty());
         if (pd.isEmpty()) {
@@ -24,11 +23,17 @@ public class Program {
         if (pd.isEmpty()) {
             System.out.println("Ate everything ! ");
         }
-        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        System.out.printf("pd.getPezCount() = %d%n", pd.getPezCount());
         pd.fill(3);
-        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        System.out.println("pd.getPezCount() = " + pd.getPezCount());
         pd.fill(4);
-        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        System.out.println("pd.getPezCount() = " + pd.getPezCount());
+        try {
+            pd.fill(400);
+        } catch (IllegalArgumentException iae) {
+            System.out.printf("Whoa .... the error was %s \n", iae.getMessage());
+        }
+        System.out.println("Now we can proceed with execution !");
 //        System.out.println("pd.MAX_PEZ = " + pd.MAX_PEZ);
 //        // this gets a warning due to being class scope static variable
 //        System.out.println("Pez_3_0.MAX_PEZ = " + Pez_3_0.MAX_PEZ);
@@ -36,10 +41,10 @@ public class Program {
 //        // in terms of definition
 //        System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
 //        // Praise my lecturer !for this amazing example !
-//        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+//        System.out.println("pd.getPezCount() = " + pd.getPezCount());
 //        System.out.println("pd.isEmpty() = " + pd.isEmpty());
 //        pd.fill(); // added Thread.sleep and InterruptedException
-//        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+//        System.out.println("pd.getPezCount() = " + pd.getPezCount());
 
 
         //
