@@ -30,10 +30,19 @@ public class Program {
         System.out.println("pd.getPezCount() = " + pd.getPezCount());
         try {
             pd.fill(400);
+            System.out.println("This is NEVER EXECUTED!");
         } catch (IllegalArgumentException iae) {
+            // this is a runtime exception and does not need to be declared at the ,method level
             System.out.printf("Whoa .... the error was %s \n", iae.getMessage());
         }
         System.out.println("Now we can proceed with execution !");
+        GoKart gk = new GoKart("Blue");
+
+        try {
+            gk.drive(154);
+        } catch (Exception e) {
+            e.printStackTrace(); // hey stacktrace!
+        }
 //        System.out.println("pd.MAX_PEZ = " + pd.MAX_PEZ);
 //        // this gets a warning due to being class scope static variable
 //        System.out.println("Pez_3_0.MAX_PEZ = " + Pez_3_0.MAX_PEZ);

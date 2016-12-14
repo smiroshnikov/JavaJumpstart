@@ -25,9 +25,14 @@ public class GoKart {
         return barCount == MAX_BARS;
     }
 
-    public void drive(int lapsDriven) {
-        lapsDriven += lapsDriven;
-        barCount -= lapsDriven;
+    public void drive(int laps) {
+        int result = lapsDriven + laps;
+        if (result > MAX_BARS) {
+            throw new IllegalArgumentException("aren't enough bars ! ");
+        }
+        lapsDriven += laps;
+        barCount -= laps;
+
     }
 
     public void drive() { // overrides drive method in case no arguments were provided to it
