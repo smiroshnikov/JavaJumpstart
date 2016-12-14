@@ -3,28 +3,12 @@ import com.sun.xml.internal.bind.v2.TODO;
 // this is my main program class name is not relevant as long as it includes main class
 public class Program {
     //  TODO re-write alchemy as tomorrow morning!
-    public static void printTextMoreTimes(String s, int count) {
-        for (int i = 0; i < count; i++) {
-            System.out.println(s);
-        }
-    }
+
 
     public static void main(String[] args) throws InterruptedException {
-
-        GoKart modelA = new GoKart("blue");
-        System.out.println("modelA.getColor() = " + modelA.getColor());
         Pez_3_0 pd = new Pez_3_0("Yoda");
-        System.out.println("pd.MAX_PEZ = " + pd.MAX_PEZ);
-        // this gets a warning due to being class scope static variable
-        System.out.println("Pez_3_0.MAX_PEZ = " + Pez_3_0.MAX_PEZ);
-        // The line above due to final and static is equivalent to line below 
-        // in terms of definition 
-        System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
-        // Praise my lecturer !for this amazing example !
         System.out.println("pd.getPez_count() = " + pd.getPez_count());
-        System.out.println("pd.isEmpty() = " + pd.isEmpty());
-        pd.fill(); // added Thread.sleep and InterruptedException
-        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        pd.fill();
         System.out.println("pd.isEmpty() = " + pd.isEmpty());
         if (pd.isEmpty()) {
             System.out.println("PezDispenser is FULL!");
@@ -35,6 +19,27 @@ public class Program {
         if (pd.isEmpty()) {
             System.out.println("Ate everything ! ");
         }
+        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        pd.fill(3);
+        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+        pd.fill(4);
+        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+//        System.out.println("pd.MAX_PEZ = " + pd.MAX_PEZ);
+//        // this gets a warning due to being class scope static variable
+//        System.out.println("Pez_3_0.MAX_PEZ = " + Pez_3_0.MAX_PEZ);
+//        // The line above due to final and static is equivalent to line below
+//        // in terms of definition
+//        System.out.println("Integer.MAX_VALUE = " + Integer.MAX_VALUE);
+//        // Praise my lecturer !for this amazing example !
+//        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+//        System.out.println("pd.isEmpty() = " + pd.isEmpty());
+//        pd.fill(); // added Thread.sleep and InterruptedException
+//        System.out.println("pd.getPez_count() = " + pd.getPez_count());
+
+
+        //
+//        GoKart modelA = new GoKart("blue");
+//        System.out.println("modelA.getColor() = " + modelA.getColor());
 
 
 //System.out.printf("Previous head was %s and new head is %s",donatello.swapHead("Mimi"),donatello.getCharacterName());
@@ -66,5 +71,6 @@ public class Program {
 //        System.out.println("yoda = " + yoda.characterName);
 //        System.out.println("donatello = " + donatello.getCharacterName());
     }
+
 }
 
