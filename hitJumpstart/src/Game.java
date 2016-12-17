@@ -22,6 +22,4 @@ public class Game {
         }
         return isHit;
     }
-
-
 }
