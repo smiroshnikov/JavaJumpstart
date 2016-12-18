@@ -7,12 +7,14 @@ public class Hangman {
 //        String example = "hello";
         Game game = new Game("threehouse");
         Prompter prompter = new Prompter(game); // expects to receive game class
+
         boolean isHit = prompter.promptForGuess();
         if (isHit) {
             System.out.println("We got a hit ! ");
         } else {
             System.out.println("You missed!");
         }
+        prompter.displayProgress();
 
 //        String coolExample = "This is a long fucking string ";
 //        char[] chararray = coolExample.toCharArray();

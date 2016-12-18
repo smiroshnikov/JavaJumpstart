@@ -23,7 +23,9 @@ public class Prompter {
         // Game class also has a method applyGuess that will be used
         return game.applyGuess(guess); // Get this structure
         // TODO game done in python 2 years ago
+    }
 
-
+    public void displayProgress() {
+        System.out.printf("try to solve : %s%n", game.getCurrrentProgress());
     }
 }
