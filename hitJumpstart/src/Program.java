@@ -43,6 +43,7 @@ public class Program {
         } catch (Exception e) {
             e.printStackTrace(); // hey stacktrace!
         }
+        System.out.println("Execution proceeded to this point, right after exception ! ");
 //        System.out.println("pd.MAX_PEZ = " + pd.MAX_PEZ);
 //        // this gets a warning due to being class scope static variable
 //        System.out.println("Pez_3_0.MAX_PEZ = " + Pez_3_0.MAX_PEZ);
