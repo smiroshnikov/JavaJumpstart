@@ -13,8 +13,25 @@ public class Hangman {
         } else {
             System.out.println("You missed!");
         }
-        //        System.out.println(example.indexOf('e'));
+//        String coolExample = "This is a long fucking string ";
+//        char[] chararray = coolExample.toCharArray();
+//        System.out.print(chararray);
+
+//        for (char ketter : coolExample.toCharArray()) {
+        // very nice without char array declaration looping over the elements
+//            System.out.print(ketter);
+//        }
+
+//        System.out.println(example.indexOf('e'));
 //        System.out.println(example + "string" + "concatenation" + letter);
 //        System.out.println(game.applyGuess('z'));
+        // cool quiz , learned something
+//        String lastName = "Oimmermann";
+//        System.out.println(lastName.charAt(0));
+//        if (lastName.charAt(0) >= 'A' && lastName.charAt(0)<'N') {
+//            System.out.println("Ohohohohoho!");
+//        }
+
+
     }
 }
