@@ -2,10 +2,15 @@
  * Created by Iidwuurliik on 12/17/2016.
  */
 public class Game {
+    public static final int MAX_MISSES = 7;
     // will know the answer
     private String answer;
     private String hits;
     private String misses;
+
+    public int getRemainingTries(){
+        return MAX_MISSES - misses.length();
+    }
 
     public Game(String answer) {
         this.answer = answer;
@@ -35,4 +40,5 @@ public class Game {
         return progress;
     }
 
+    // Adding a win method would be great here ...
 }

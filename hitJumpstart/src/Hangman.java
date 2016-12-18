@@ -8,13 +8,18 @@ public class Hangman {
         Game game = new Game("threehouse");
         Prompter prompter = new Prompter(game); // expects to receive game class
 
-        boolean isHit = prompter.promptForGuess();
-        if (isHit) {
-            System.out.println("We got a hit ! ");
-        } else {
-            System.out.println("You missed!");
+        while (game.getRemainingTries() >0 ) {
+            boolean isHit = prompter.promptForGuess();
+            if (isHit) {
+                System.out.println("We got a hit ! ");
+            } else {
+                System.out.println("You missed!");
+            }
+            prompter.displayProgress();
+            // break condition !
+
         }
-        prompter.displayProgress();
+        System.out.println("You ran out of tries ! DIE !");
 
 //        String coolExample = "This is a long fucking string ";
 //        char[] chararray = coolExample.toCharArray();
