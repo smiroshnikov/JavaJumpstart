@@ -22,4 +22,17 @@ public class Game {
         }
         return isHit;
     }
+
+    public String getCurrrentProgress() { // 6:02
+        String progress = "";
+        for (char letter : answer.toCharArray()) {
+            char display = '_';
+            if (hits.indexOf(letter) != -1) {
+                display = letter;
+            }
+            progress += display;
+        }
+        return progress;
+    }
+
 }

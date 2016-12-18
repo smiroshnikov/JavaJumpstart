@@ -13,13 +13,14 @@ public class Hangman {
         } else {
             System.out.println("You missed!");
         }
+
 //        String coolExample = "This is a long fucking string ";
 //        char[] chararray = coolExample.toCharArray();
 //        System.out.print(chararray);
 
-//        for (char ketter : coolExample.toCharArray()) {
+//        for (char kLetter : coolExample.toCharArray()) {
         // very nice without char array declaration looping over the elements
-//            System.out.print(ketter);
+//            System.out.print(kLetter);
 //        }
 
 //        System.out.println(example.indexOf('e'));
