@@ -3,16 +3,22 @@
  */
 public class UdacityPad2 {
     public static void main(String[] args) {
-        int n = 10;
-        while (n > 1) {
-            System.out.println(n);
-            if ((n % 2) == 0) {
-                n = n / 2;
-            } else
-                n = 3 * n + 1;
-
-        }
-
-
+        java.util.Properties props = System.getProperties();
+        System.out.println("OS: " + props.get("os.name")
+                + " " + props.get("os.version"));
+        System.out.println("Java: " + props.get("java.vendor")
+                + " " + props.get("java.version"));
+        String classpath = "" + props.get("java.class.path");
+        String ide;
+        if (classpath.contains("bluej"))
+            ide = "BlueJ";
+        else if (props.get("com.horstmann.codecheck") != null)
+            ide = "Udacity";
+        else
+            ide = "IntelliJ Idea";
+        System.out.println("IDE: " + ide);
+        System.out.println("Secret code: " +
+                Math.abs(ide.hashCode() % 10000));
     }
 }
+
