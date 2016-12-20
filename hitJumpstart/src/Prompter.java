@@ -16,7 +16,11 @@ public class Prompter {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please guess a letter : ");
         String guessInput = scanner.nextLine();
-        char guess = guessInput.charAt(0);
+        char guess = guessInput.toLowerCase().charAt(0); //solved by myself
+        //char g = guessInput.toLowerCase().charAt(0);
+        //Character guess = new Character(g);
+
+
         // it is required to see if guess matches or not
         // this is games's class job
         // that's why game object is present in prompt's constructor

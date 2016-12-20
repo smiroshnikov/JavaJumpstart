@@ -13,7 +13,7 @@ public class Game {
     }
 
     public Game(String answer) {
-        this.answer = answer;
+        this.answer = answer.toLowerCase();
         hits = "";
         misses = "";
     }
