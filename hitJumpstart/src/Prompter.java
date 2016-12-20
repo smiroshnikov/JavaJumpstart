@@ -20,9 +20,9 @@ public class Prompter {
             System.out.print("Please guess a letter : ");
             String guessInput = scanner.nextLine();
             //char guess = guessInput.toLowerCase().charAt(0); //solved by myself
-            char guess = guessInput.charAt(0);
+            //char guess = guessInput.charAt(0); - no longer needed !
             try {
-                isHit = game.applyGuess(guess);
+                isHit = game.applyGuess(guessInput);
                 isAcceptable = true;
             } catch (IllegalArgumentException iae) {
                 System.out.printf("%s .Please try again %n", iae.getMessage());

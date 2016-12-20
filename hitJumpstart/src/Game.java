@@ -28,8 +28,17 @@ public class Game {
         }
         return isHit;
     }
+    public boolean applyGuess(String letters) {
+        if (letters.isEmpty()){
+            throw new IllegalArgumentException("Empty Input ! ");
+        }
+//        char firstLetter = letters.charAt(0);
+//        return applyGuess(firstLetter); // beautiful !!!!
+        return applyGuess(letters.charAt(0));
+    } // method overloading ! cool
 
-    public String getCurrrentProgress() { // 6:02
+
+        public String getCurrrentProgress() { // 6:02
         String progress = "";
         for (char letter : answer.toCharArray()) {
             char display = '_';
