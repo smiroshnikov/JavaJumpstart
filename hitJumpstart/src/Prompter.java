@@ -41,4 +41,9 @@ public class Prompter {
         System.out.printf("You have %d tries , to solve : %s%n", game.getRemainingTries(),
                 game.getCurrrentProgress());
     }
+
+    public String displayOutcome (){
+        if (game.isWon()){return "Congratulations!";}
+        else {return "GAME OVER ! Insert Coin ";}
+    }
 }

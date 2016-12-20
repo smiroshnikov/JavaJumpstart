@@ -28,8 +28,9 @@ public class Game {
         }
         return isHit;
     }
+
     public boolean applyGuess(String letters) {
-        if (letters.isEmpty()){
+        if (letters.isEmpty()) {
             throw new IllegalArgumentException("Empty Input ! ");
         }
 //        char firstLetter = letters.charAt(0);
@@ -38,7 +39,7 @@ public class Game {
     } // method overloading ! cool
 
 
-        public String getCurrrentProgress() { // 6:02
+    public String getCurrrentProgress() { // 6:02
         String progress = "";
         for (char letter : answer.toCharArray()) {
             char display = '_';
@@ -60,5 +61,9 @@ public class Game {
         letter = Character.toLowerCase(letter);
         return letter;
     }
+
     // Adding a win method would be great here ...
+    public boolean isWon() {
+        return getCurrrentProgress().indexOf('_') == -1;
+    }
 }

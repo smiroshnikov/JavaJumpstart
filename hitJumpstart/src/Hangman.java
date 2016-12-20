@@ -8,7 +8,7 @@ public class Hangman {
         Game game = new Game("threehouse");
         Prompter prompter = new Prompter(game); // expects to receive game class
 
-        while (game.getRemainingTries() > 0) {
+        while (game.getRemainingTries() > 0 && !game.isWon()) {
             boolean isHit = prompter.promptForGuess();
 //            if (isHit) {
 //                System.out.println("We got a hit ! ");
@@ -19,7 +19,14 @@ public class Hangman {
             // break condition !
 
         }
-        System.out.println("You ran out of tries ! DIE !");
+        System.out.println(prompter.displayOutcome());
+//        if (game.isWon()) {
+//            System.out.println("You Win!");
+//        } else {
+//            System.out.println("Game Over , Insert Coin to Play again ...");
+//        }
+
+
 //        String coolExample = "This is a long fucking string ";
 //        char[] chararray = coolExample.toCharArray();
 //        System.out.print(chararray);
