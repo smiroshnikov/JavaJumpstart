@@ -42,8 +42,12 @@ public class Prompter {
                 game.getCurrrentProgress());
     }
 
-    public String displayOutcome (){
-        if (game.isWon()){return "Congratulations!";}
-        else {return "GAME OVER ! Insert Coin ";}
+    public String displayOutcome() {
+        // TODO prompt win / lose messages and word instead of returning a string
+        if (game.isWon()) {
+            return "Congratulations!";
+        } else {
+            return "GAME OVER ! Insert Coin ";
+        }
     }
 }

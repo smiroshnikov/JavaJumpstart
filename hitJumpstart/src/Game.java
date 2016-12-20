@@ -8,6 +8,10 @@ public class Game {
     private String hits;
     private String misses;
 
+    public String getAnswer() {
+        return answer;
+    }
+
     public int getRemainingTries() {
         return MAX_MISSES - misses.length();
     }
