@@ -19,7 +19,7 @@ public class Game {
     }
 
     public boolean applyGuess(char letter) {
-        letter = normilizedGuess(letter);
+        letter = normalizedGuess(letter);
         boolean isHit = answer.indexOf(letter) != -1; // this is a weird way to search...
         if (isHit) {
             hits += letter;
@@ -41,7 +41,7 @@ public class Game {
         return progress;
     }
 
-    private char normilizedGuess(char letter) {
+    private char normalizedGuess(char letter) {
         if (!Character.isLetter(letter)) {
             throw new IllegalArgumentException("Fuck you ! This is not a letter !");
         }

@@ -33,7 +33,6 @@ public class Prompter {
             // that's why game object is present in prompt's constructor
             // Game class also has a method applyGuess that will be used
         } while (!isAcceptable);
-
         return isHit;
         // TODO game done in python 2 years ago
     }
