@@ -8,7 +8,7 @@ public class Game {
     private String hits;
     private String misses;
 
-    public int getRemainingTries(){
+    public int getRemainingTries() {
         return MAX_MISSES - misses.length();
     }
 
@@ -19,6 +19,7 @@ public class Game {
     }
 
     public boolean applyGuess(char letter) {
+        letter = normilizedGuess(letter);
         boolean isHit = answer.indexOf(letter) != -1; // this is a weird way to search...
         if (isHit) {
             hits += letter;
@@ -40,5 +41,15 @@ public class Game {
         return progress;
     }
 
+    private char normilizedGuess(char letter) {
+        if (!Character.isLetter(letter)) {
+            throw new IllegalArgumentException("Fuck you ! This is not a letter !");
+        }
+        if (misses.indexOf(letter) != -1 || hits.indexOf(letter) != -1) {
+            throw new IllegalArgumentException(letter + "has already been guessed!");
+        }
+        letter = Character.toLowerCase(letter);
+        return letter;
+    }
     // Adding a win method would be great here ...
 }

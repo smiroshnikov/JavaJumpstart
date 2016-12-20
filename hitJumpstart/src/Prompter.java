@@ -13,19 +13,28 @@ public class Prompter {
     }
 
     public boolean promptForGuess() {
+        boolean isHit = false;
+        boolean isAcceptable = false;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please guess a letter : ");
-        String guessInput = scanner.nextLine();
-        char guess = guessInput.toLowerCase().charAt(0); //solved by myself
-        //char g = guessInput.toLowerCase().charAt(0);
-        //Character guess = new Character(g);
+        do {
+            System.out.print("Please guess a letter : ");
+            String guessInput = scanner.nextLine();
+            //char guess = guessInput.toLowerCase().charAt(0); //solved by myself
+            char guess = guessInput.charAt(0);
+            try {
+                isHit = game.applyGuess(guess);
+                isAcceptable = true;
+            } catch (IllegalArgumentException iae) {
+                System.out.printf("%s .Please try again %n", iae.getMessage());
+            }
+            //Character guess = new Character(NEED-CHAR);
+            // it is required to see if guess matches or not
+            // this is games's class job
+            // that's why game object is present in prompt's constructor
+            // Game class also has a method applyGuess that will be used
+        } while (!isAcceptable);
 
-
-        // it is required to see if guess matches or not
-        // this is games's class job
-        // that's why game object is present in prompt's constructor
-        // Game class also has a method applyGuess that will be used
-        return game.applyGuess(guess); // Get this structure
+        return isHit;
         // TODO game done in python 2 years ago
     }
 

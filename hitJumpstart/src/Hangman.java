@@ -10,11 +10,11 @@ public class Hangman {
 
         while (game.getRemainingTries() >0 ) {
             boolean isHit = prompter.promptForGuess();
-            if (isHit) {
-                System.out.println("We got a hit ! ");
-            } else {
-                System.out.println("You missed!");
-            }
+//            if (isHit) {
+//                System.out.println("We got a hit ! ");
+//            } else {
+//                System.out.println("You missed!");
+//            }
             prompter.displayProgress();
             // break condition !
 
