@@ -3,7 +3,6 @@
  */
 public class Game {
     public static final int MAX_MISSES = 7;
-    // will know the answer
     private String answer;
     private String hits;
     private String misses;

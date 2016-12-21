@@ -38,16 +38,16 @@ public class Prompter {
     }
 
     public void displayProgress() {
-        System.out.printf("You have %d tries , to solve : %s%n", game.getRemainingTries(),
-                game.getCurrrentProgress());
+        if (!game.isWon()) {
+            System.out.printf("You have %d tries , to solve : %s%n", game.getRemainingTries(), game.getCurrrentProgress());
+        }
     }
 
-    public String displayOutcome() {
-        // TODO prompt win / lose messages and word instead of returning a string
+    public void displayOutcome() {
         if (game.isWon()) {
-            return "Congratulations!";
+            System.out.println("Congratulations!");
         } else {
-            return "GAME OVER ! Insert Coin ";
+            System.out.println("GAME OVER ! Insert Coin ");
         }
     }
 }

@@ -5,6 +5,7 @@ public class Hangman {
     public static void main(String[] args) {
 //        char letter = 'B';
 //        String example = "hello";
+        // TODO currently capital letters if repeated are counted as a valid try , should be fixed !
         if (args.length == 0) {
             System.out.println("usage java Hangman <answer>");
             System.out.println("answer is required !");
@@ -15,23 +16,10 @@ public class Hangman {
 
         while (game.getRemainingTries() > 0 && !game.isWon()) {
             boolean isHit = prompter.promptForGuess();
-//            if (isHit) {
-//                System.out.println("We got a hit ! ");
-//            } else {
-//                System.out.println("You missed!");
-//            }
             prompter.displayProgress();
-            // break condition !
-
         }
-        System.out.println(prompter.displayOutcome());
-        if (!game.isWon()){System.out.printf("The word was %s", game.getAnswer());}
-
-//        if (game.isWon()) {
-//            System.out.println("You Win!");
-//        } else {
-//            System.out.println("Game Over , Insert Coin to Play again ...");
-//        }
+        prompter.displayOutcome();
+        System.out.printf("The word was '%s'", game.getAnswer());
 
 
 //        String coolExample = "This is a long fucking string ";
