@@ -5,7 +5,12 @@ public class Hangman {
     public static void main(String[] args) {
 //        char letter = 'B';
 //        String example = "hello";
-        Game game = new Game("penis");
+        if (args.length == 0) {
+            System.out.println("usage java Hangman <answer>");
+            System.out.println("answer is required !");
+            System.exit(1);
+        }
+        Game game = new Game(args[0]);
         Prompter prompter = new Prompter(game); // expects to receive game class
 
         while (game.getRemainingTries() > 0 && !game.isWon()) {
