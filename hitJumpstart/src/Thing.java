@@ -1,15 +1,21 @@
+import com.teamtreehouse.Treet;
+
 /**
- * Created by Iidwuurliik on 12/21/2016.
+ * Created by Iidwuurliik
  */
+
 public class Thing {
-    private String firstName;
-    private String lastName;
+    public static void main(String[] args) {
+        String test = new String("Max");
+        String compareTest = new String("Max");
+        Treet treet = new Treet();
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
+        System.out.printf("This is instance of an empty  class ! -> %s %n", treet);
+        if (test == compareTest) {
+            System.out.printf("They are equal");
+        } else {
+            System.out.printf("Ebuchaya Java!");
+            // they are actually not same object , thanks D. Craig
+        }
     }
 }
