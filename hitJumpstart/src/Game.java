@@ -1,6 +1,7 @@
 /**
  * Created by Iidwuurliik
  */
+
 public class Game {
     public static final int MAX_MISSES = 7;
     private String answer;
@@ -46,7 +47,7 @@ public class Game {
     // and within string method I called char method , this solved 2 issues
     // I can accept strings and empty strings as input
 
-    public String getCurrrentProgress() {
+    public String getCurrentProgress() {
         String progress = "";
         for (char letter : answer.toCharArray()) {
             char display = '_';
@@ -70,6 +71,6 @@ public class Game {
     }
 
     public boolean isWon() {
-        return getCurrrentProgress().indexOf('_') == -1;
+        return getCurrentProgress().indexOf('_') == -1;
     }
 }

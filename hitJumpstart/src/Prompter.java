@@ -39,7 +39,7 @@ public class Prompter {
 
     public void displayProgress() {
         if (!game.isWon()) {
-            System.out.printf("You have %d tries , to solve : %s%n", game.getRemainingTries(), game.getCurrrentProgress());
+            System.out.printf("You have %d tries , to solve : %s%n", game.getRemainingTries(), game.getCurrentProgress());
         }
     }
 

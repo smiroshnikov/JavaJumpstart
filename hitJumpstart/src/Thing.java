@@ -1,21 +1,19 @@
 import com.teamtreehouse.Treet;
 
+import java.util.Date;
+
 /**
  * Created by Iidwuurliik
  */
 
 public class Thing {
     public static void main(String[] args) {
-        String test = new String("Max");
-        String compareTest = new String("Max");
-        Treet treet = new Treet();
+        Date date = new Date(2016, 11, 11);
+        Date date2 = new Date();
+        Treet treet = new Treet("Momo", "Free Penis Enlargement !", date);
 
-        System.out.printf("This is instance of an empty  class ! -> %s %n", treet);
-        if (test == compareTest) {
-            System.out.printf("They are equal");
-        } else {
-            System.out.printf("Ebuchaya Java!");
-            // they are actually not same object , thanks D. Craig
-        }
+        System.out.println(treet.getDateWasSet());
+
+
     }
 }
