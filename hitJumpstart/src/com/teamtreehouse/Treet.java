@@ -22,6 +22,11 @@ public class Treet {
         return description;
     }
 
+    @Override // help the compiler to understand that understand that method of super type is overridden
+    public String toString() {
+        return "Treet : \"" + description + "\" -@" + author;
+    }
+
     public Date getDateWasSet() {
         return dateWasSet;
     }

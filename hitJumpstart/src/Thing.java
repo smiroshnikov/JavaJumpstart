@@ -15,8 +15,8 @@ public class Thing {
                 "Free Penis Enlargement !",
                 new Date(1482421000000L)); // don't forget about this , instantiated during other
         // class instantiation , also "L" for milliseconds from epoch
-
-
         System.out.println(treet.getDateWasSet());
+        System.out.println(treet.toString());
+        System.out.printf("%s", treet); // this is very very interesting , printf calls automatically for overriden toString class ?!
     }
 }
