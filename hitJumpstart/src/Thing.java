@@ -20,11 +20,18 @@ public class Thing {
         System.out.println(treet.toString());
         System.out.printf("%s", treet); // this is very very interesting , printf calls automatically for overriden toString class ?!
 
-        Object obj = treet;
-        System.out.printf("%n Upcast ?! %s %n", obj.toString()); // Max
-        Treet another = (Treet) obj; // downcasting ?
-        System.out.printf("Downcasting %s %n", another);
+        Object obj = treet; // reference of object type that points to my class@FAA23 , this is a pointer like in C
+        // cannot use getDate method from Treet , can use only functions that Object have
+        System.out.printf("%n (NE YAVNO )Explicit Downcasting  safe  %s %n", obj.toString()); // the reference knows that object has such overridden toString
+
+        Treet another = (Treet) obj; // I have created a reference , that points to object but I am of Treet type and I
+        // can use any treet methods // Upcasting is unsafe
+
+        System.out.printf("Implicit YAVNO!!! %s %n", another);
+
+
         Object[] someStuff = {treet, "whatever String"};
+
         System.out.println(((Treet) someStuff[0]).getDescription()); // actually works!
         //System.out.println(((Treet) someStuff[1]).getDescription()); // will fail ! need more info on downcasting
         System.out.println(someStuff[0] instanceof Treet);
